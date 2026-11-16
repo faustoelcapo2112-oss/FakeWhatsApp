@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title></title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000}
+video{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+</style>
+</head>
+<body>
+<video autoplay muted playsinline loop>
+  <source src="./rickroll.mp4" type="video/mp4">
+</video>
+<script>
+const video=document.querySelector("video");
+document.addEventListener("pointerdown",()=>{
+  video.muted=false;
+  video.play().catch(()=>{});
+},{once:true});
+</script>
+</body>
+</html>
